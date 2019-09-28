@@ -1,0 +1,4 @@
+<div class="post-item">
+    <div class="post-time"><%= item.date.format('MMM DD') %></div>
+    <a href="<%- url_for(item.path) %>" class="post-link"><%= item.title || '(' + __('no_title') + ')'  %></a>
+</div>

@@ -1,0 +1,15 @@
+<div class="profile">
+	<section id="wrapper">
+		<header id="header">
+        	<a href="<%- url_for(theme.profile_link) %>">
+        	    <img id="avatar" class="2x" src="<%- theme.avatar %>">
+        	</a>
+        	<h1><%= config.title %></h1>
+        	<% if (theme.hitokoto){ %>
+        		<h2 id="hitokoto">LOADING</h2>
+        	<% } else { %>
+        		<h2><%= config.subtitle %></h2>
+        	<% } %>
+		</header>
+	</section>
+</div>

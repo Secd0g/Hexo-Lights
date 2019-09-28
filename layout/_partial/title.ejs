@@ -1,0 +1,5 @@
+<li>
+    <aside class="dates"><%= item.date.format('MMM DD YYYY') %></aside>
+    <a href="<%- url_for(item.path) %>"><%= item.title || '(' + __('no_title') + ')'  %></a>
+    <h2></h2>
+</li>

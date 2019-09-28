@@ -1,0 +1,27 @@
+#post-nav 
+	text-align center
+	font-size 13px
+	font-weight 500
+	margin-top 20px
+	span 
+		-webkit-transition all .1s linear
+		-moz-transition all .1s linear
+		-ms-transition all .1s linear
+		-o-transition all .1s linear
+		transition all .1s linear
+		position relative
+		&.prev 
+			float left
+			&:hover 
+				left -3px
+				.arrow 
+					left -4px
+		&.next 
+			float right
+			&:hover 
+				right -3px
+				.arrow 
+					right -4px
+		.arrow 
+			position relative
+			padding 1px

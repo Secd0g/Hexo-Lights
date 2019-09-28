@@ -1,0 +1,181 @@
+.code 
+	pre 
+		overflow-x auto
+		color #24292e
+		-webkit-text-size-adjust none
+#post-body 
+	.highlight 
+		margin 0
+		padding 16px
+		background #f6f8fa
+		overflow auto
+		color #ccc
+		border-radius 3px
+		margin-bottom 20px
+		code 
+			background #eee
+			text-shadow 0 1px #fff
+			padding 0 .3em
+		pre 
+			border none
+			margin 0
+			padding 0
+			white-space pre
+			font-family "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace
+			font-size 13px
+			padding 4px
+			border-radius 0
+			background transparent
+		table 
+			margin 0
+			width auto
+			border 0 none
+		tr 
+			border 0 none
+		td 
+			border 0 none
+			padding 0
+			background transparent
+			&.gutter 
+				padding 0
+		figcaption 
+			font-size .75em
+			color #999
+			line-height 1em
+			margin-bottom 1em
+			a 
+				float right
+	pre 
+		font-size .85em
+		code 
+			background 0 0
+			text-shadow none
+			padding 0
+	.gist 
+		margin 0 -20px
+		border-style solid
+		border-color #dedede
+		border-width 1px 0
+		background #2d2d2d
+		padding 15px 20px 15px 0
+		.gist-file 
+			border none
+			margin 0
+			.gist-data 
+				background 0 0
+				border none
+				.line-numbers 
+					background 0 0
+					border none
+					padding 0 20px 0 0
+				.line-data 
+					padding 0!important
+			.highlight 
+				margin 0
+				padding 0
+				border none
+			.gist-meta 
+				background #2d2d2d
+				color #999
+				text-shadow 0 0
+				padding 0
+				margin-top 1em
+				margin-left 20px
+				a 
+					color #7cc576
+					font-weight 400
+					&:hover 
+						text-decoration underline
+#post-body .gist .gist-file .gist-data .line-numbers,#post-body .highlight .gutter pre 
+	color #7c90a5
+/*.comment,.quote 
+	color #8e908c
+.deletion,.name,.regexp,.selector-attr,.selector-class,.selector-id,.tag,.template-variable,.variable 
+	color #2196f3
+.built_in,.builtin-name,.link,.literal,.meta,.number,.params,.type 
+	color #d345ff
+.attribute 
+	color #0366d6
+.addition,.bullet,.string,.symbol 
+	color color-light
+.section,.title 
+	color #4271ae
+.keyword,.selector-tag 
+	color #8959a8*/
+.comment,.meta 
+	color #6a737d
+.string,.variable,.template-variable,.strong,.emphasis,.quote 
+	color #df5000
+.keyword,.selector-tag,.type 
+	color #6f42c1
+.literal,.symbol,.bullet,.attribute,.number
+	color #005cc5
+.section,.name 
+	color #22863a
+.tag 
+	color #333333
+.title,.attr,.selector-id,.selector-class,.selector-attr,.selector-pseudo 
+	color #795da3
+.addition 
+	color #55a532
+	background-color #eaffea
+.deletion 
+	color #bd2c00
+	background-color #ffecec
+.emphasis 
+	font-style italic
+.strong 
+	font-weight 700
+
+.instantclick-bar 
+	background color-light !important
+
+@media screen and (max-width:540px)
+	#wrapper
+		padding: 20px 20px 20px 20px
+	nav
+		&.main-nav
+			text-align: center
+	a
+		&.cta
+			display: none
+
+	#post-meta
+		margin-top: 60px
+
+	h2
+		&.footline
+			font-size: 13px
+
+	h1
+		font-size: 26px
+
+	#post-list
+		.dates
+			display: none
+
+	#post-list-footer
+		margin-top: 20px
+		padding-top: 40px
+
+	.post
+		margin: 40px 0
+	h2
+		font-size: 20px
+		&.headline
+			font-size: 13px
+	h1
+		font-size: 24px
+
+	#archive-list,#post-list
+		margin-top: 0
+
+	#title
+		font-size: 17px
+
+@media screen and (max-width:768px)
+	.archive .post-time
+		margin: 5px 0
+		width: auto
+		font-size: 13px
+		display: block

@@ -1,0 +1,80 @@
+#archive-list 
+	margin-top 100px
+	li 
+		&:last-child 
+			margin-bottom 0
+	a 
+		display block
+		font 700 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif
+		color #333
+	.dates 
+		float right
+		position relative
+		top 1px
+		font 300 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif
+		color #222
+#archive-list li,#post-list li 
+	border-top 1px solid #eee
+	padding-top 20px
+	padding-bottom 20px
+	list-style-type none
+	margin-bottom 0
+#archive-link 
+	display inline-block
+	font-size 13px
+	font-weight 700
+	border-radius 4px
+	padding 3px 10px 6px
+	box-shadow 0 0 0 1px hsla(207,83%,80%,1)
+	&:hover 
+		background color-dark
+		color #fff
+		box-shadow 0 0 0 1px color-dark
+	span 
+		position relative
+		top 0
+		font-size 17px
+#archive-list li a:hover,#archive-list li:hover .dates 
+	color color-dark
+.archive .post-link,.ct-list a 
+	color #222
+.archive .post-link:hover,.ct-list a:hover 
+	color color-dark
+	transition .3s ease-out
+.ct-list 
+	padding 10px 0
+	a 
+		margin-right 10px
+		font 400 14px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif
+	span 
+		font-style normal
+		font-size .6em
+		vertical-align super
+		opacity .6
+#tagcloud 
+	a 
+		&:before 
+			content '#'
+#tag 
+	h3 
+		&:before 
+			content '#'
+.archive 
+	margin 0 0 50px 0
+	font-size 16px
+	.post-item 
+		padding 10px 0
+		overflow-x hidden
+		white-space nowrap
+	.post-time 
+		display inline-block
+		width 60px
+		margin 0
+		color #8a8a8a
+.archive-title 
+	margin 0
+	color color-font
+.archive-page-counter,.category-page-counter,.tag-page-counter
+	font italic 19px/1.3em Georgia,serif
+	display block
+	margin-bottom 10px

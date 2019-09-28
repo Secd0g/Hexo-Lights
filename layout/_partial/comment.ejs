@@ -1,0 +1,54 @@
+<% if (!index && page.comments && theme.gitment){ %>
+  <section id="comment">
+    <button class="btn" id="loadcmts" onclick="cmts.load();"><%= __('load_comments') %></button>
+    <div id="gitment"></div>
+    <script src='<%- theme.js.gitment %>'></script>
+    <link rel="stylesheet" href='<%- theme.css.gitment %>'>
+    <script>
+      var cmts={
+        load:function cmts(){
+          var gitment = new Gitment({
+          <% if(item.title){ %>
+            id: "<%= item.title %>",
+          <% } %>
+            owner: "<%= (theme.gitment.username) %>",
+            repo: "<%= (theme.gitment.repo) %>",
+            oauth: {
+              client_id: "<%= (theme.gitment.id) %>",
+              client_secret: "<%= (theme.gitment.secret) %>",
+            },
+          })
+          gitment.render('gitment');
+          var loadcmt = document.getElementById("loadcmts");
+          var imyourfather = loadcmt.parentNode;
+          imyourfather.removeChild(loadcmts)
+        }
+      }
+    </script>
+  </section>
+<% } else if (!index && page.comments && theme.disqus_shortname){ %>
+  <section id="comment">
+    <button class="btn" id="loadcmts" onclick="cmts.load();"><%= __('load_comments') %></button>
+    <div id="disqus_thread"></div>
+  </section>
+  <script>
+    var cmts={
+      load:function cmts(){
+        var disqus_config = function () {
+        this.page.url = "<%- item.permalink %>";
+        this.page.identifier = "<%- item.permalink %>";
+        };
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://<%= theme.disqus_shortname %>.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        var loadcmt = document.getElementById("loadcmts");
+        var imyourfather = loadcmt.parentNode;
+        imyourfather.removeChild(loadcmts)
+      }
+    }
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<% } %>

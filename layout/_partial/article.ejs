@@ -1,0 +1,52 @@
+<article class="post">
+    <header>
+        <% if (item.title){ %>
+            <h1><%= item.title %></h1>
+        <% } %>
+        <h2 class="headline"><%= item.date.format('MMM DD YYYY') %>
+        <% if (item.categories && item.categories.length){ %>
+            <%
+            var cats = [];
+            item.categories.forEach(function(cat){
+                cats.push('<a href="' + config.root + cat.path + '#' + cat.name + '">' + cat.name + '</a>');
+            });
+            %>
+            <%- cats.join(', ') %>
+        <% } %>
+        </h2>
+    </header>
+</article>
+<section id="post-body"><%- item.content %></section>
+    <% if (item.tags && item.tags.length){ %>
+        <%
+        var tags = [];
+        item.tags.forEach(function(tag){
+            tags.push('<a href="' + config.root + tag.path + '#' + tag.name + '">' + tag.name + '</a>');
+        });
+        %>
+        <h2 class="footline">
+            <%- tags.join(', ') %>
+        </h2>
+    <% } %>
+<% if(is_post()){ %>
+    <footer id="post-meta" class="clearfix">
+        <a href="<%- config.root %><%- theme.profile_link %>">
+        <img class="avatar" src="<%- theme.avatar %>">
+        <div>
+            <span class="dark"><%= config.title %></span>
+            <span><%= config.subtitle %></span>
+        </div>
+        </a>
+        <section id="sharing">
+            <a title="Share to Twitter" class="twitter" href="https://twitter.com/intent/tweet?text=<%- page.permalink %> - <%= item.title || '(' + __('no_title') + ')'  %> @<%- theme.twitter %>"><span class="icon-twitter">tweet</span></a>
+            <a title="Share to Facebook" class="facebook" href="#" onclick="
+                window.open(
+                  'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+                  'facebook-share-dialog',
+                  'width=626,height=436');
+                return false;"><span class="icon-facebook-sign">Share</span>
+            </a>
+        </section>
+    </footer>
+<% } %>
+<%- partial('comment') %>

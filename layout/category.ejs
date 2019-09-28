@@ -1,0 +1,28 @@
+<%- partial('_partial/profile') %>
+
+<span class="category-page-counter">
+    <% var categories = site.categories.length %>
+    <%-  _p("counter.categories", site.categories.length) %>
+</span>
+<div class="archive" id="category">
+    <h3 class="archive-title"><%= __('category') %></h3>
+    <ul class="ct-list">
+        <% site.categories.map(function(category){  %>
+            <a href="#<%= category.name %>" title="<%= category.name %>"><%= category.name %><span><%= category.length %></span></a>
+        <% }) %>
+        </div>
+    </ul>
+</div>
+<% site.categories.map(function(category){  %>
+<div class="archive" id="category">
+            	<h3 id="<%- category.name %>" class="archive-title"><%- category.name %></h3>
+    <ul>
+    <% category.posts.map(function(item){  %>
+    	<div class="post-item">
+    		<div class="post-time"><%= item.date.format('MMM DD') %></div>
+    		<a href="<%- config.root %><%- item.path %>" class="post-link"><%= item.title || '(' + __('no_title') + ')'  %></a>
+		</div>
+    <% }) %>
+    </ul>
+</div>
+<% }) %>

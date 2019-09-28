@@ -1,0 +1,27 @@
+<%- partial('_partial/profile') %>
+
+<span class="tag-page-counter">
+    <% var tags_length = site.tags.length %>
+    <%-  _p("counter.tags", site.tags.length) %>
+</span>
+<div class="archive" id="tagcloud">
+    <h3 class="archive-title"><%= __('tagcloud') %></h3>
+    <ul class="ct-list">
+        <% site.tags.map(function(tag){  %>
+            <a href="#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span><%= tag.length %></span></a>
+        <% }) %>
+    </ul>
+</div>
+<% site.tags.map(function(tag){  %>
+<div class="archive" id="tag">
+            	<h3 id="<%- tag.name %>" class="archive-title"><%- tag.name %></h3>
+    <ul>
+    <% tag.posts.map(function(item){  %>
+    	<div class="post-item">
+    		<div class="post-time"><%= item.date.format('MMM DD') %></div>
+    		<a href="<%- config.root %><%- item.path %>" class="post-link"><%= item.title || '(' + __('no_title') + ')'  %></a>
+		</div>
+    <% }) %>
+    </ul>
+</div>
+<% }) %>

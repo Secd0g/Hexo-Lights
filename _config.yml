@@ -1,0 +1,31 @@
+menu: #TITLE: link
+  About: about/
+  Archives: archives/
+
+profile_link: about/ #profile avatar-img link
+avatar: /images/avatar.png #Please also prepare a HDer picture and add suffix@2x put in the same directory.
+
+gitment:
+ username: 
+ repo: 
+ id: 
+ secret: 
+
+theme_color: a1d0f6
+
+disqus_shortname: 
+
+twitter: 
+
+hitokoto: false #Output a Chinese sentence to description
+instantclick: true #open INSTANTCLICK
+service_worker: false #open SERVICE WORKER
+
+js: #CDN
+  instantclick: //cdnjs.loli.net/ajax/libs/instantclick/3.0.1/instantclick.min.js
+  hitokoto: //v1.hitokoto.cn/?encode=js&select=%23hitokoto
+  service_worker: /sw.js
+  gitment: /js/gitment.browser.js
+
+css: #CDN
+  gitment: 

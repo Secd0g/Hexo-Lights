@@ -1,0 +1,25 @@
+category: Category
+tag: Tag
+prev: Newer posts
+next: Older posts
+archive_a: Archives
+tagcloud: Tagcloud
+page: Page %d
+rss: Subscribe
+home: Home
+no_title: No Title
+load_comments: Load Comments
+readmore: Read more
+counter:
+  tags:
+    zero: No tags
+    one: 1 tag in total
+    other: "%d tags in total"
+  categories:
+    zero: No categories
+    one: 1 category in total
+    other: "%d categories in total"
+  archive_posts:
+    zero: No posts.
+    one: 1 post.
+    other: "%d posts in total."

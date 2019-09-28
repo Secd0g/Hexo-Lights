@@ -1,0 +1,7 @@
+<%- partial('_partial/profile') %>
+<ul id="post-list">
+    <% page.posts.each(function(item){ %>
+        <%- partial('_partial/title', {item: item, index: true}) %>
+    <% }); %>
+</ul>
+<%- partial('_partial/pagination') %>
