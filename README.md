@@ -1,11 +1,11 @@
-![DEMO](https://wx2.sinaimg.cn/large/005zWjpngy1frnimy8mbmj30pp0g340k)
+![DEMO](demo.png)
 
-原hugo主题：https://github.com/digitalcraftsman/hugo-cactus-theme
+原主题：https://github.com/zker-themes/hexo-theme-lightime
 
 ## 安装 Install
 
 ```bash
-git clone -b master https://github.com/caisiduo/hexo-theme-lightime themes/lightime
+git clone -b master https://github.com/F0r3at/Lights themes/Lights
 ```
 
 ## 特色 Features
@@ -17,9 +17,10 @@ git clone -b master https://github.com/caisiduo/hexo-theme-lightime themes/light
 - 文章页内分享功能。 / Sharing component in article.
 - 支持归档页，分类、标签页。 / Archive page, Categories page, Tags page.
 - i18n国际化。 / i18n.
-- ~~**源码很乱**~~ Nothing-lol
+- 去掉了MoreRead功能
+- 修改了部分字体
 
-**因为自己并不会写主题，欢迎各位dalao二次开发**
+**之前学了一下，发现自己并不是前端的料，各位大佬可以继续开发~**
 
 ## 配置 Config
 ```yaml
@@ -56,4 +57,4 @@ css: #CDN
   gitment: 
 ```
 
-**[DEMO](https://caisiduo.github.io)**
+**[DEMO](https://getpass.cn/)**
