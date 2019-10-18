@@ -57,4 +57,4 @@ css: #CDN
   gitment: 
 ```
 
-**[DEMO](https://getpass.cn/)**
+**[DEMO](http://f0r3at.website)**
